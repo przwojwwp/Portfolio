@@ -1,28 +1,37 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+
+  --text-color-light: #213547;
+  --text-color-dark: rgba(255, 255, 255, 0.87);
+  --background-color-light: #fff;
+  --background-color-dark: #242424;
+
+  --font-synthesis: none;
+  --text-rendering: optimizeLegibility;
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
+  flex-direction: column;
+  min-width: 100vw;
   min-height: 100vh;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  body {
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
   }
 }
