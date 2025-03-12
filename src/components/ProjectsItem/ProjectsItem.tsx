@@ -1,11 +1,19 @@
-// import KatVRImage from "@/assets/project_katVR-icon.svg";
 import "./ProjectsItem.scss";
-import { projectsIcons } from "@/assets/index";
 
-export const ProjectsItem = () => {
+type ProjectsItemProps = {
+  image: string;
+  description: string;
+  projectUrl: string;
+};
+
+export const ProjectsItem = (props: ProjectsItemProps) => {
+  const { image, description, projectUrl } = props;
+
   return (
     <article className="projects-list__item">
-      <img src={projectsIcons.katVR} alt="KateVR Page" />
+      <a href={projectUrl} target="_blank">
+        <img src={image} alt={description} />
+      </a>
     </article>
   );
 };

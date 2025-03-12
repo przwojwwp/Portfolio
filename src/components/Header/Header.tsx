@@ -1,10 +1,9 @@
-import React from "react";
+import "./Header.scss";
 
-export const Header: React.FC = () =>
-{
+export const Header: React.FC = () => {
   return (
     <header>
       <h1>Wojciech Przyłuski - Portfolio</h1>
     </header>
-  )
-}
+  );
+};
