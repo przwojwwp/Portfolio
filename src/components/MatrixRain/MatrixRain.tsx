@@ -55,7 +55,7 @@ export const MatrixRain = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
+      style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
     />
   );
 };
