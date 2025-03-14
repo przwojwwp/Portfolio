@@ -7,20 +7,19 @@ export const MatrixRain = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return; 
+    if (!ctx) return;
+
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVXYZ".repeat(6).split("");
+    const fontSize = 24;
+    let columns = Math.floor(canvas.width / fontSize);
+    let drops = Array(columns).fill(1);
 
     const resizeCanvas = () => {
       canvas.width = document.documentElement.scrollWidth;
       canvas.height = document.documentElement.scrollHeight;
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
     };
-    resizeCanvas();
-
-    window.addEventListener("resize", resizeCanvas);
-
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVXYZ".repeat(6).split("");
-    const fontSize = 24;
-    const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(1);
 
     const draw = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
@@ -38,10 +37,18 @@ export const MatrixRain = () => {
       }
     };
 
+    const handleResize = () => {
+      resizeCanvas();
+      draw();
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", handleResize);
+
     const interval = setInterval(draw, 33);
     return () => {
       clearInterval(interval);
-      window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
