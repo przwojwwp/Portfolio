@@ -5,6 +5,12 @@ import { projectsIcons } from "@/assets/index";
 export const projects: Projects[] = [
   {
     id: nanoid(),
+    image: projectsIcons.todos,
+    description: "Interactive task list with fetching",
+    projectUrl: "https://przwojwwp.github.io/react_todo-app-with-api/",
+  },
+  {
+    id: nanoid(),
     image: projectsIcons._2048,
     description: "2048 Game Icon, click to visit the game",
     projectUrl: "https://przwojwwp.github.io/js_2048_game/",

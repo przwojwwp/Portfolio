@@ -1,25 +1,25 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header/Header";
-import { MatrixRain } from "./components/MatrixRain/MatrixRain";
+// import { MatrixRain } from "./components/MatrixRain/MatrixRain";
 import { ProjectsList } from "./components/ProjectsList/ProjectsList";
 
 export function App() {
-  const [isRaining, setIsRaining] = useState(false);
+  // const [isRaining, setIsRaining] = useState(false);
 
-  const handleMatrixRain = () => {
-    setIsRaining(!isRaining);
-  };
+  // const handleMatrixRain = () => {
+  //   setIsRaining(!isRaining);
+  // };
 
   return (
     <>
-      <button onClick={handleMatrixRain}>
+      {/* <button onClick={handleMatrixRain}>
         {isRaining ? "Stop The Rain" : "Let's Raining"}
-      </button>
+      </button> */}
       <Header />
       <ProjectsList />
 
-      {isRaining && <MatrixRain />}
+      {/* {isRaining && <MatrixRain />} */}
     </>
   );
 }

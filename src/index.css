@@ -27,6 +27,7 @@ body {
   font-weight: var(--font-weight);
   color: var(--text-color-dark);
   background-color: var(--background-color-dark);
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: light) {
