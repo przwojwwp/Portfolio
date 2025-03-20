@@ -1,19 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 :root {
-  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: "Roboto", sans-serif;
   --line-height: 1.5;
   --font-weight: 400;
 
-  --text-color-light: #213547;
-  --text-color-dark: rgba(255, 255, 255, 0.87);
-  --background-color-light: #fff;
-  --background-color-dark: #242424;
+  --text-color: #000000;
+  --background-color: #f8f8f8;
 
   --font-synthesis: none;
   --text-rendering: optimizeLegibility;
   --webkit-font-smoothing: antialiased;
   --moz-osx-font-smoothing: grayscale;
-
-  color-scheme: light dark;
 }
 
 body {
@@ -25,9 +23,25 @@ body {
   font-family: var(--font-family);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
-  color: var(--text-color-dark);
-  background-color: var(--background-color-dark);
+  color: var(--text-color);
+  background-color: var(--background-color);
   overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250vw;
+  height: 250vh;
+  z-index: -1;
+  background-image: url("/images/background.svg");
+  background-repeat: repeat;
+  background-size: 5%;
+  background-position: left top;
+  transform: translateY(-30%) translateX(-23%) rotate(-20deg);
+  transform-origin: center center;
 }
 
 @media (prefers-color-scheme: light) {

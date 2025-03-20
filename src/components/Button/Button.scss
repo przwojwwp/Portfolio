@@ -18,12 +18,12 @@
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  margin-top: 3%;
+  margin-top: 2.5%;
 
   &:hover {
     background-color: rgba(0, 255, 0, 0.15);
     box-shadow: 0 0 16px rgba(0, 255, 0, 0.5);
-    transform: scale(1.05);
+    transform: scale(1.5);
   }
 
   &:active {
@@ -40,7 +40,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transform: scaleX(1.1);
+    transform: scaleX(1.5);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }

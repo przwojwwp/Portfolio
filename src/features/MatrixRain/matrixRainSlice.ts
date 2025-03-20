@@ -6,7 +6,7 @@ interface MatrixRainState {
 }
 
 const initialState: MatrixRainState = {
-  isEnabled: false,
+  isEnabled: true,
 };
 
 export const matrixRainSlice = createSlice({

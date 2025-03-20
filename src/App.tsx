@@ -12,7 +12,6 @@ export function App() {
     <>
       <Header />
       <ProjectsList />
-
       {isMatrixRainEnabled && <MatrixRain />}
     </>
   );

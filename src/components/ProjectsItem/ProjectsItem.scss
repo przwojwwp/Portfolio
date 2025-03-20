@@ -1,6 +1,11 @@
 .projects-list__item {
   flex: 0 1 32%;
   margin-bottom: 2%;
+  animation: pulse 1.5s infinite alternate ease-in-out;
+
+  &:hover {
+    animation: none;
+  }
 
   & img {
     margin: 0 auto;
@@ -11,8 +16,18 @@
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.5);
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
   }
 }
 

@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { Projects } from "src/types/projects";
-import { projectsIcons } from "@/assets/index";
+import { projectsIcons } from "@/assets/icons/index";
 
 export const projects: Projects[] = [
   {
