@@ -19,12 +19,12 @@
 
 @media (max-width: 768px) {
   .projects-list__item {
-    flex: 1 1 48%;
+    flex: 0 1 48%;
   }
 }
 
 @media (max-width: 480px) {
   .projects-list__item {
-    flex: 1 1 100%;
+    flex: 0 1 100%;
   }
 }
