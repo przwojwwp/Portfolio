@@ -1,7 +1,6 @@
 .projects-list__item {
   flex: 0 1 32%;
   margin-bottom: 2%;
-  background-color: white;
 
   & img {
     margin: 0 auto;
@@ -15,7 +14,7 @@
 
   &:hover img {
     animation: none;
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
 

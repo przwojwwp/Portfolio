@@ -8,10 +8,8 @@ interface Props {
 
 export const Button = ({ handleButtonClick, children }: Props) => {
   return (
-    // <article className="projects-list__item">
     <button type="button" onClick={handleButtonClick} className="matrix-btn">
       {children}
     </button>
-    // </article>
   );
 };

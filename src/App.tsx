@@ -12,7 +12,7 @@ export function App() {
     <>
       {isMatrixRainEnabled && <MatrixRain />}
 
-      <div className="">
+      <div className="main">
         <Header />
         <ProjectsList />
       </div>
