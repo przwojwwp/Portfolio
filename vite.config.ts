@@ -13,4 +13,7 @@ export default defineConfig({
     },
   },
   assetsInclude: ["**/*.svg", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif"],
+  server: {
+    host: true,
+  },
 });

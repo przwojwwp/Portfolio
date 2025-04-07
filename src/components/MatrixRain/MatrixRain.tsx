@@ -11,15 +11,18 @@ export const MatrixRain = () => {
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVXYZ".repeat(6).split("");
     const fontSize = 24;
-    let columns = Math.floor(canvas.width / fontSize);
-    let drops = Array(columns).fill(1);
 
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      columns = Math.floor(canvas.width / fontSize);
-      drops = Array(columns).fill(1);
-    };
+    const width = window.innerWidth;
+    const height = Math.max(
+      window.innerHeight,
+      document.documentElement.clientHeight
+    );
+
+    canvas.width = width;
+    canvas.height = height;
+
+    const columns = Math.floor(width / fontSize);
+    const drops = Array(columns).fill(1);
 
     const draw = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
@@ -37,25 +40,25 @@ export const MatrixRain = () => {
       }
     };
 
-    const handleResize = () => {
-      resizeCanvas();
-      draw();
-    };
-
-    resizeCanvas();
-    window.addEventListener("resize", handleResize);
-
     const interval = setInterval(draw, 33);
+
     return () => {
       clearInterval(interval);
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: "fixed", top: 0, left: 0, zIndex: -1 }}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100dvh", // 💥 najważniejsza zmiana
+        zIndex: -1,
+        pointerEvents: "none",
+      }}
     />
   );
 };
