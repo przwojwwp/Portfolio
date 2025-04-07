@@ -10,9 +10,12 @@ export function App() {
 
   return (
     <>
-      <Header />
-      <ProjectsList />
       {isMatrixRainEnabled && <MatrixRain />}
+
+      <div className="">
+        <Header />
+        <ProjectsList />
+      </div>
     </>
   );
 }

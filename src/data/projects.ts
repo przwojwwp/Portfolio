@@ -5,9 +5,15 @@ import { projectsIcons } from "@/assets/icons/index";
 export const projects: Projects[] = [
   {
     id: nanoid(),
-    image: projectsIcons.todos,
-    description: "Interactive task list with fetching",
-    projectUrl: "https://przwojwwp.github.io/react_todo-app-with-api/",
+    image: projectsIcons.katVR,
+    description: "KatVR Website Icon, click to visit the site",
+    projectUrl: "https://przwojwwp.github.io/layout_KateVR/",
+  },
+  {
+    id: nanoid(),
+    image: projectsIcons.myBike,
+    description: "MyBike Website Icon, click to visit the site",
+    projectUrl: "https://przwojwwp.github.io/layout_miami/",
   },
   {
     id: nanoid(),
@@ -17,13 +23,6 @@ export const projects: Projects[] = [
   },
   {
     id: nanoid(),
-    image: projectsIcons.katVR,
-    description: "KatVR Website Icon, click to visit the site",
-    projectUrl: "https://przwojwwp.github.io/layout_KateVR/",
-  },
-
-  {
-    id: nanoid(),
     image: projectsIcons.futurum,
     description:
       "Futurum Campaign Builder Icon, click to visit the campaign builder",
@@ -31,11 +30,10 @@ export const projects: Projects[] = [
   },
   {
     id: nanoid(),
-    image: projectsIcons.myBike,
-    description: "MyBike Website Icon, click to visit the site",
-    projectUrl: "https://przwojwwp.github.io/layout_miami/",
+    image: projectsIcons.todos,
+    description: "Interactive task list with fetching",
+    projectUrl: "https://przwojwwp.github.io/react_todo-app-with-api/",
   },
-
   {
     id: nanoid(),
     image: projectsIcons._2048,

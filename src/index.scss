@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
+/* === GLOBAL VARIABLES === */
 :root {
   --font-family: "Roboto", sans-serif;
   --line-height: 1.5;
@@ -14,8 +15,15 @@
   --moz-osx-font-smoothing: grayscale;
 }
 
-body {
+/* === BASIC RESET === */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+/* === BODY STYLES === */
+body {
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -28,6 +36,7 @@ body {
   overflow-x: hidden;
 }
 
+/* === BACKGROUND SVG PATTERN === */
 body::before {
   content: "";
   position: fixed;
@@ -44,9 +53,10 @@ body::before {
   transform-origin: center center;
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    color: var(--text-color-light);
-    background-color: var(--background-color-light);
-  }
+/* === ROOT CONTAINER === */
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }

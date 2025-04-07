@@ -1,11 +1,7 @@
 .projects-list__item {
   flex: 0 1 32%;
   margin-bottom: 2%;
-  animation: pulse 1.5s infinite alternate ease-in-out;
-
-  &:hover {
-    animation: none;
-  }
+  background-color: white;
 
   & img {
     margin: 0 auto;
@@ -13,11 +9,13 @@
     width: 50%;
     object-fit: contain;
     cursor: pointer;
+    animation: pulse 1.5s infinite alternate ease-in-out;
     transition: transform 0.3s ease-in-out;
+  }
 
-    &:hover {
-      transform: scale(1.5);
-    }
+  &:hover img {
+    animation: none;
+    transform: scale(1.5);
   }
 }
 

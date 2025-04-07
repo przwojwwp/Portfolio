@@ -15,8 +15,8 @@ export const MatrixRain = () => {
     let drops = Array(columns).fill(1);
 
     const resizeCanvas = () => {
-      canvas.width = document.documentElement.scrollWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(1);
     };

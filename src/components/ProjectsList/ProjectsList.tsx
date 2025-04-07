@@ -14,9 +14,6 @@ export const ProjectsList = () => {
 
   return (
     <section className="projects-list">
-      <Button handleButtonClick={() => dispatch(toggleMatrixRain())}>
-        {isMatrixRainEnabled ? "Stop The Rain" : "Make It Rain"}
-      </Button>
       {projects.map((project) => (
         <ProjectsItem
           key={project.id}
@@ -25,6 +22,9 @@ export const ProjectsList = () => {
           projectUrl={project.projectUrl}
         />
       ))}
+      <Button handleButtonClick={() => dispatch(toggleMatrixRain())}>
+        {isMatrixRainEnabled ? "Stop The Rain" : "Make It Rain"}
+      </Button>
     </section>
   );
 };
